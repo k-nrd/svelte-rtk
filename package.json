@@ -16,6 +16,7 @@
     "docs": "ts-docs src/index.ts"
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.8.0",
     "@ts-docs/default-docs-structure": "^0.2.5",
     "@ts-docs/ts-docs": "^0.2.5",
     "@types/jest": "^27.4.0",
@@ -37,5 +38,8 @@
     "ts-node": "^10.4.0",
     "tsutils": "^3.21.0",
     "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "@reduxjs/toolkit": "^1.8.0"
   }
 }

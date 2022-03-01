@@ -4,11 +4,15 @@
   "description": "Redux Toolkit for Svelte",
   "author": "Gustavo Konrad <g.konrad@outlook.com>",
   "license": "MIT",
-  "module": "index.js",
-  "svelte": "index.js",
-  "typings": "index.d.ts",
+  "module": "dist/index.js",
+  "svelte": "dist/index.js",
+  "typings": "dist/types.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.build.json",
+    "pub": "np",
     "docs": "ts-docs src/index.ts"
   },
   "devDependencies": {
@@ -25,6 +29,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.0.0",
     "jest": "^27.4.7",
+    "np": "^7.6.0",
+    "redux": "^4.1.2",
     "svelte": "^3.46.4",
     "svelte-eslint-parser": "^0.15.0",
     "ts-jest": "^27.1.3",

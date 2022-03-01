@@ -24,10 +24,15 @@ module.exports = {
   ],
 	rules: {
 		'comma-dangle': 'off',
+		'func-call-spacing': 'off',
+    'indent': 'off',
     'functional/functional-parameters': 'off',
     'functional/no-return-void': 'off',
 		'space-before-function-paren': ['error', 'always'],
 		'@typescript-eslint/func-call-spacing': ['error', 'always'],
+		'@typescript-eslint/indent': ['error', 2],
+		'@typescript-eslint/indent': ['error', 2],
+		'@typescript-eslint/consistent-type-definitions': ['error', 'type'],
 	},
   overrides: [
     {

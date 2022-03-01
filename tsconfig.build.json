@@ -4,6 +4,12 @@
     "noEmit": false,
     "module": "es6"
   },
-  "include": ["src"],
-  "exclude": ["**/*.spec.ts", "**/*.spec-mocks.ts", "**/*.spec-helpers.ts"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "**/*.spec.ts", 
+    "**/*.spec-mocks.ts", 
+    "**/*.spec-helpers.ts"
+  ]
 }

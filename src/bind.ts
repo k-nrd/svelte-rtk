@@ -1,4 +1,4 @@
-import type { Action, Store } from 'redux'
+import type { Action, Store } from '@reduxjs/toolkit'
 
 import { readable } from 'svelte/store'
 import { BoundStore } from './types'

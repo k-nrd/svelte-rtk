@@ -25,24 +25,3 @@ export const useDispatch = <S, A>(): Dispatch<Action<A>> => {
   const { dispatch } = getContext<BoundStore<S, A>> (KEY)
   return dispatch
 }
-
-// probably can do better typing this
-export const useSlice = <S, A> (structuredSelector: Readonly<Record<string, any>>): Record<string, Dispatch<Action<A>> | Readable<any>> => {
-  const dispatch = useDispatch ()
-
-  const applyStructuredSelector = (): Record<string, Readable<ReturnType<typeof structuredSelector[keyof typeof structuredSelector]>>> =>
-    Object
-      .keys (structuredSelector)
-      .reduce (
-        (acc, cur) => ({
-          ...acc,
-          [cur]: useSelector<S, A, ReturnType<typeof structuredSelector[keyof typeof structuredSelector]>> (structuredSelector[cur])
-        }),
-        {}
-      )
-
-  return {
-    dispatch,
-    ...applyStructuredSelector ()
-  }
-}

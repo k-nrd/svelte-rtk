@@ -12,26 +12,19 @@ module.exports = {
   },
 	plugins: [
     '@typescript-eslint', 
-    'functional'
   ],
   extends: [
     'standard-with-typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:functional/external-recommended',
-    'plugin:functional/lite',
-    'plugin:functional/stylistic'
   ],
 	rules: {
+    'indent': 'off',
 		'comma-dangle': 'off',
 		'func-call-spacing': 'off',
-    'indent': 'off',
-    'functional/functional-parameters': 'off',
-    'functional/no-return-void': 'off',
 		'space-before-function-paren': ['error', 'always'],
+		'@typescript-eslint/indent': ['error', 2],
 		'@typescript-eslint/func-call-spacing': ['error', 'always'],
-		'@typescript-eslint/indent': ['error', 2],
-		'@typescript-eslint/indent': ['error', 2],
 		'@typescript-eslint/consistent-type-definitions': ['error', 'type'],
 	},
   overrides: [
@@ -42,7 +35,6 @@ module.exports = {
         parser: '@typescript-eslint/parser',
       },
 			rules: {
-				'functional/no-let': 'off',
 				'no-use-before-define': 'off'
 			},
       env: { browser: true, node: false },

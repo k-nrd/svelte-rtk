@@ -16,8 +16,7 @@ specifiers:
   eslint-plugin-promise: ^5.0.0
   jest: ^27.4.7
   np: ^7.6.0
-  redux: ^4.1.2
-  svelte: ^3.46.4
+  svelte: ^3.47.0
   svelte-eslint-parser: ^0.15.0
   ts-jest: ^27.1.3
   ts-node: ^10.4.0
@@ -40,9 +39,8 @@ devDependencies:
   eslint-plugin-promise: 5.2.0_eslint@7.32.0
   jest: 27.4.7_ts-node@10.4.0
   np: 7.6.0
-  redux: 4.1.2
-  svelte: 3.46.4
-  svelte-eslint-parser: 0.15.0_svelte@3.46.4
+  svelte: 3.47.0
+  svelte-eslint-parser: 0.15.0_svelte@3.47.0
   ts-jest: 27.1.3_a7e53b5e5b59e71a0fd4d8cf128393d5
   ts-node: 10.4.0_43d2036524ce97aa8076ce68340fa9ec
   tsutils: 3.21.0_typescript@4.5.5
@@ -5281,7 +5279,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-eslint-parser/0.15.0_svelte@3.46.4:
+  /svelte-eslint-parser/0.15.0_svelte@3.47.0:
     resolution: {integrity: sha512-BlSavqWxsga5px23oux3Z7gX/U/OvtEu4ml2WoYeKaeLkg9xIgmP6RVwoI4KOrabnZO8QxRghCYDM0oOQvsvqA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -5290,11 +5288,11 @@ packages:
       eslint-scope: 7.1.0
       eslint-visitor-keys: 3.2.0
       espree: 9.3.0
-      svelte: 3.46.4
+      svelte: 3.47.0
     dev: true
 
-  /svelte/3.46.4:
-    resolution: {integrity: sha512-qKJzw6DpA33CIa+C/rGp4AUdSfii0DOTCzj/2YpSKKayw5WGSS624Et9L1nU1k2OVRS9vaENQXp2CVZNU+xvIg==}
+  /svelte/3.47.0:
+    resolution: {integrity: sha512-4JaJp3HEoTCGARRWZQIZDUanhYv0iyoHikklVHVLH9xFE9db22g4TDv7CPeNA8HD1JgjXI1vlhR1JZvvhaTu2Q==}
     engines: {node: '>= 8'}
     dev: true
 

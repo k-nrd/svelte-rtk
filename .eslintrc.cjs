@@ -4,15 +4,13 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
     project: './tsconfig.json',
-    extraFileExtensions: ['svelte']
+    extraFileExtensions: ['.svelte']
   },
   env: {
     es6: true,
     node: true, // for config files
   },
-	plugins: [
-    '@typescript-eslint', 
-  ],
+	plugins: ['@typescript-eslint'],
   extends: [
     'standard-with-typescript',
     'plugin:@typescript-eslint/recommended',
@@ -43,5 +41,9 @@ module.exports = {
       files: ['src/**/*.ts', 'src/**/*.js'],
       env: { browser: true, node: false },
     },
+    {
+      files: ['**/*.ts', '**/*.js'],
+      env: { browser: false, node: true },
+    },
   ],
-};
+}

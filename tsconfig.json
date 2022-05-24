@@ -17,10 +17,12 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     "stripInternal": true,
-    "types": ["node", "jest"]
+    "types": [
+      "node",
+      "jest"
+    ]
   },
-  "include": [
-    "src", 
-    "bench"
+  "exclude": [
+    "dist"
   ]
 }

@@ -9,6 +9,7 @@
   $: if ($count != null) emittedCount = emittedCount + 1
 </script>
 
+<h1>Counter</h1>
 <button on:click={() => dispatch (increment ())}>
   add 1
 </button>

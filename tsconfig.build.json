@@ -2,14 +2,15 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": false,
+    "sourceMap": false,
     "module": "es6"
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "**/*.spec.ts", 
-    "**/*.spec-mocks.ts", 
+    "**/*.spec.ts",
+    "**/*.spec-mocks.ts",
     "**/*.spec-helpers.ts"
   ]
 }

@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
+import { createUseDispatch, createUseSelector } from '../../../src/hooks'
 
 import { counterReducer } from './slices/counter'
 import { usersApi } from './slices/users'
@@ -18,9 +19,9 @@ export const store = configureStore ({
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 
-export const useDispatch = createUseDispatch<AppDispatch> ()
+export const useDispatch = createUseDispatch<RootState, AppDispatch> ()
 
-export const useSelector = createUseSelector<RootState> ()
+export const useSelector = createUseSelector<RootState, AppDispatch> ()
 
 // optional, but required for refetchOnFocus/refetchOnReconnect behaviors
 // see `setupListeners` docs - takes an optional callback as the 2nd arg for customization

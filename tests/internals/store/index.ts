@@ -15,6 +15,13 @@ export const store = configureStore ({
   middleware: () => [usersApi.middleware]
 })
 
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
+
+export const useDispatch = createUseDispatch<AppDispatch> ()
+
+export const useSelector = createUseSelector<RootState> ()
+
 // optional, but required for refetchOnFocus/refetchOnReconnect behaviors
 // see `setupListeners` docs - takes an optional callback as the 2nd arg for customization
 setupListeners (store.dispatch)

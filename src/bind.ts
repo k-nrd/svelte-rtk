@@ -12,6 +12,7 @@ export const bind = <S, A>(store: Readonly<Store<S, Action<A>>>): BoundStore<S, 
 
   return {
     subscribe: state.subscribe,
+    getState: store.getState,
     dispatch: store.dispatch
   }
 }

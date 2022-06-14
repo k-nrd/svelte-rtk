@@ -19,6 +19,8 @@
     "docs": "ts-docs src/index.ts"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
     "@reduxjs/toolkit": "^1.8.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/svelte": "^3.1.1",
@@ -26,8 +28,10 @@
     "@ts-docs/ts-docs": "^0.2.5",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.14",
+    "@types/redux-thunk": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.0",
+    "babel-jest": ">=27.0.0 <28",
     "eslint": "^7.12.1",
     "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-plugin-functional": "^4.1.1",
@@ -35,7 +39,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.0.0",
     "jest": "^26",
-    "node-fetch": "^2",
     "np": "^7.6.0",
     "svelte": "^3.47.0",
     "svelte-eslint-parser": "^0.15.0",
@@ -44,7 +47,8 @@
     "ts-jest": "^26",
     "ts-node": "^10.4.0",
     "tsutils": "^3.21.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "whatwg-fetch": "^3.6.2"
   },
   "peerDependencies": {
     "@reduxjs/toolkit": "^1.8.0",

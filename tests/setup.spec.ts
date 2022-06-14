@@ -1,7 +1,4 @@
-import '@testing-library/jest-dom'
-
 import { render } from '@testing-library/svelte'
-
 import TestApp from './internals/test-app.svelte'
 
 test ('All test components are being rendered', () => {

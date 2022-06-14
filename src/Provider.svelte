@@ -1,5 +1,5 @@
 <script>
-  import { provideStore } from './hooks'
+  import { provideStore } from './provide'
 
   export let store
 

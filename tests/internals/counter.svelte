@@ -1,9 +1,12 @@
 <script lang="ts">
-  import { useSelector, useDispatch } from '../../src'
+  import { selector, dispatcher } from './store'
   import { increment, incrementIfOdd, decrement } from './store/slices/counter'
 
-  const count = useSelector<number> (s => s.count)
-  const dispatch = useDispatch ()
+  const count = selector (s => s.count)
+  const dispatch = dispatcher ()
+
+  const whatever = ({ type: 'whatever', payload: null })
+  dispatch (whatever)
 
   let emittedCount = 0
   $: if ($count != null) emittedCount = emittedCount + 1

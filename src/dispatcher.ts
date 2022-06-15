@@ -4,14 +4,14 @@ import type { BoundStore } from './types'
 import { getContext } from 'svelte'
 import { KEY } from './constants'
 
-export function createUseDispatch<
+export function createDispatcher<
   ST extends unknown = unknown,
   AD extends Dispatch = Dispatch
 > () {
-  return function useDispatch (): AD {
+  return function dispatcher (): AD {
     const { dispatch } = getContext<BoundStore<ST, AD>> (KEY)
     return dispatch
   }
 }
 
-export const useDispatch = createUseDispatch ()
+export const dispatcher = createDispatcher ()

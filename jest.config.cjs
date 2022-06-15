@@ -6,12 +6,11 @@ module.exports = {
         preprocess: true
       }
     ],
-    '^.+\\.js$': 'babel-jest',
     '^.+\\.ts$': 'ts-jest'
   },
   moduleFileExtensions: [
-    'js',
     'ts',
+    'js',
     'svelte'
   ],
   setupFilesAfterEnv: ['./jest.setup.ts']

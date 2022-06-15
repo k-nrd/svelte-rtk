@@ -1,5 +1,5 @@
 import type { Dispatch } from '@reduxjs/toolkit'
-import type { BoundStore, Comparison, Selector, SelectorHook } from './types'
+import type { BoundStore, Comparison, Selector, CreateSelector } from './types'
 
 import { getContext } from 'svelte'
 import { Readable, readable } from 'svelte/store'
@@ -9,11 +9,11 @@ function refEquality<T> (a: T, b: T): boolean {
   return a === b
 }
 
-export function createUseSelector<
+export function createSelector<
   ST extends unknown = unknown,
   AD extends Dispatch = Dispatch
-> (): SelectorHook<ST> {
-  return function useSelector<SL> (
+> (): CreateSelector<ST> {
+  return function selector<SL> (
     selector: Selector<ST, SL>,
     equalityFn: Comparison<SL> = refEquality
   ): Readable<SL> {
@@ -34,4 +34,4 @@ export function createUseSelector<
   }
 }
 
-export const useSelector = createUseSelector ()
+export const selector = createSelector ()

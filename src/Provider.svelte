@@ -6,4 +6,4 @@
   provideStore (store)
 </script>
 
-<slot></slot>
+<slot />

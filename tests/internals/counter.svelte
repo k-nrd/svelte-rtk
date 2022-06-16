@@ -2,7 +2,7 @@
   import { selector, dispatcher } from './store'
   import { increment, incrementIfOdd, decrement } from './store/slices/counter'
 
-  const count = selector (s => s.count)
+  const count = selector (s => s.counter)
   const dispatch = dispatcher ()
 
   const whatever = ({ type: 'whatever', payload: null })
@@ -13,7 +13,7 @@
 </script>
 
 <h1>Counter</h1>
-<button on:click={() => dispatch (increment ())}>
+<button on:click={() => dispatch (increment (1))}>
   add 1
 </button>
 <button on:click={() => dispatch (incrementIfOdd ())}>
@@ -22,5 +22,5 @@
 <button on:click={() => dispatch (decrement ())}>
   sub 1
 </button>
-<p>count: {$count || ''}</p>
+<p>count: {$count}</p>
 <p>emitted: {emittedCount}</p>

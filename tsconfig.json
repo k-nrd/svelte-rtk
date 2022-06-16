@@ -22,6 +22,11 @@
       "jest"
     ]
   },
+  "include": [
+    "src",
+    "tests",
+    "jest.setup.ts"
+  ],
   "exclude": [
     "dist"
   ]

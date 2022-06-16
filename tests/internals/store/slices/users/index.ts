@@ -31,7 +31,7 @@ export const usersApi = createApi ({
     baseUrl: 'https://jsonplaceholder.typicode.com/users'
   }),
   endpoints: (build) => ({
-    getUsers: build.query<User[], unknown> ({
+    getUsers: build.query<User[], void> ({
       query: () => '/'
     })
   })

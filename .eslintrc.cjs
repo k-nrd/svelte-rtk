@@ -11,11 +11,15 @@ module.exports = {
     node: true, // for config files
     jest: true
   },
-	plugins: ['@typescript-eslint'],
+	plugins: [
+    '@typescript-eslint',
+    'jest-dom'
+  ],
   extends: [
     'standard-with-typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:jest-dom/recommended'
   ],
 	rules: {
     'indent': 'off',
@@ -33,9 +37,6 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
       },
-			rules: {
-				'no-use-before-define': 'off'
-			},
       env: { browser: true, node: false },
     },
     {
@@ -43,8 +44,12 @@ module.exports = {
       env: { browser: true, node: false },
     },
     {
-      files: ['**/*.ts', '**/*.js'],
+      files: ['*.ts', '*.js'],
       env: { browser: false, node: true },
+    },
+    {
+      files: ['tests/**/*.ts', 'tests/**/*.js'],
+      env: { browser: false, node: true, jest: true },
     },
   ],
 }

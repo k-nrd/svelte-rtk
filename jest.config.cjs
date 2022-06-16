@@ -13,5 +13,6 @@ module.exports = {
     'js',
     'svelte'
   ],
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['./jest.setup.ts']
 }

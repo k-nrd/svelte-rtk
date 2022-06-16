@@ -3,16 +3,19 @@
   import { getUsers } from './store/slices/users'
 
   const dispatch = dispatcher ()
-  const users = selector (getUsers.select (null))
+  const users = selector (getUsers.select ())
+  $: console.log ($users)
 </script>
 
 <h1>Users</h1>
 
-<button on:click={() => dispatch (getUsers.initiate (null))}>
+<button on:click={() => dispatch (getUsers.initiate ())}>
   fetch users!
 </button>
 
-{#if !$users.isUninitialized}
+{#if $users.isUninitialized}
+  <p>No users to show...</p>
+{:else}
   {#if $users.isError}
     <p>Couldn't fetch users :(</p>
   {:else if $users.isLoading}

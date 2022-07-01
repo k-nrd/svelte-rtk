@@ -2,12 +2,14 @@ import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { createSelector, createDispatcher } from '../../../src'
 
+import { currentUserReducer } from './slices/current-user'
 import { counterReducer } from './slices/counter'
 import { usersApi } from './slices/users'
 
 export const store = configureStore ({
   reducer: {
     counter: counterReducer,
+    currentUser: currentUserReducer,
     // Add the generated reducer as a specific top-level slice
     [usersApi.reducerPath]: usersApi.reducer,
   },

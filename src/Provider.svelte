@@ -1,9 +1,9 @@
 <script>
-  import { provideStore } from './hooks'
+  import { provideStore } from './provide'
 
   export let store
 
   provideStore (store)
 </script>
 
-<slot></slot>
+<slot />

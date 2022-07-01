@@ -1,6 +1,6 @@
 {
   "name": "svelte-rtk",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Redux Toolkit for Svelte",
   "author": "Gustavo Konrad <g.konrad@outlook.com>",
   "type": "module",

@@ -1,5 +1,5 @@
 import { readable } from 'svelte/store';
-export var bind = function (store) {
+export function bind(store) {
     var state = readable(store.getState(), function (set) {
         return store.subscribe(function () {
             set(store.getState());
@@ -7,6 +7,7 @@ export var bind = function (store) {
     });
     return {
         subscribe: state.subscribe,
+        getState: function () { return store.getState(); },
         dispatch: store.dispatch
     };
-};
+}
